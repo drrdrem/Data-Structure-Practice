@@ -36,6 +36,7 @@ class max_heap(object):
         while self.Heap[cur]>self.Heap[self._parent(cur)]:
             self.Heap[cur], self.Heap[self._parent(cur)] = self.Heap[self._parent(cur)], self.Heap[cur]
             cur = self._parent(cur)
+            
     def pop(self):
         popped = self.Heap[1]
         self.Heap[1] = self.Heap[-1]
